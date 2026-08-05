@@ -27,7 +27,7 @@ do
 	title.Size = UDim2.new(0.9,0,0.25,0)
 	title.Position = UDim2.new(0.05,0,0.35,0)
 	title.BackgroundTransparency = 1
-	title.Text = "Blood Hub"
+	title.Text = "U7Duels"
 	title.TextColor3 = Color3.fromRGB(255,45,45)
 	title.TextTransparency = 1
 	title.TextScaled = true
@@ -1596,7 +1596,7 @@ do
 		TweenService:Create(pbg,TweenInfo.new(0.18),{BackgroundColor3=on and ACCENT or OFF_BG}):Play()
 		TweenService:Create(ps,TweenInfo.new(0.18),{Color=on and DARK_ACC or BORDER2}):Play()
 		TweenService:Create(dot,TweenInfo.new(0.18,Enum.EasingStyle.Back),{
-			Position=on and UDim2.new(1,-14,0.5,-6) or UDim2.new(0,2,0.5,-6),BackgroundColor3=WHITE
+			Position=on and UDim2.new(1,-14,0.5,-6) or UDim2.new(0,2,0.5,-6),BackgroundColor3=BLUE
 		}):Play()
 	end
 	local clk=Instance.new("TextButton",c)
@@ -1613,7 +1613,7 @@ rowKBOnly("Settings","Hide / Show GUI","Toggle GUI visibility",KB.GuiHide,functi
 do
 	-- Lock UI — starts LOCKED (guiLocked=true), pill reflects that
 	local c=baseCard("Settings",34)
-	cLabel(c,"Lock UI",8,120,10,WHITE,Enum.Font.GothamBold)
+	cLabel(c,"Lock UI",8,120,10,BLUE,Enum.Font.GothamBold)
 	local PW,PH=34,18
 	local pbg=Instance.new("Frame",c)
 	pbg.Size=UDim2.new(0,PW,0,PH);pbg.Position=UDim2.new(1,-(PW+8),0.5,-PH/2)
@@ -1623,7 +1623,7 @@ do
 	local ps=Instance.new("UIStroke",pbg);ps.Color=BORDER2;ps.Thickness=1
 	local dot=Instance.new("Frame",pbg)
 	dot.Size=UDim2.new(0,12,0,12);dot.Position=UDim2.new(0,2,0.5,-6)
-	dot.BackgroundColor3=WHITE;dot.BorderSizePixel=0;dot.ZIndex=9
+	dot.BackgroundColor3=PURPLE;dot.BorderSizePixel=0;dot.ZIndex=9
 	Instance.new("UICorner",dot).CornerRadius=UDim.new(0,4)
 	local sublbl=cLabel(c,"Locked",8+120+4,60,8,DIM,Enum.Font.Gotham)
 	local clk=Instance.new("TextButton",c)
@@ -1635,7 +1635,7 @@ do
 		TweenService:Create(pbg,TweenInfo.new(0.18),{BackgroundColor3=unlocked and ACCENT or OFF_BG}):Play()
 		TweenService:Create(ps,TweenInfo.new(0.18),{Color=unlocked and DARK_ACC or BORDER2}):Play()
 		TweenService:Create(dot,TweenInfo.new(0.18,Enum.EasingStyle.Back),{
-			Position=unlocked and UDim2.new(1,-14,0.5,-6) or UDim2.new(0,2,0.5,-6),BackgroundColor3=WHITE
+			Position=unlocked and UDim2.new(1,-14,0.5,-6) or UDim2.new(0,2,0.5,-6),BackgroundColor3=BLUE
 		}):Play()
 		sublbl.Text=guiLocked and "Locked" or "Unlocked"
 	end)
@@ -1662,7 +1662,7 @@ do
 	local incBtn=Instance.new("TextButton",c)
 	incBtn.Size=UDim2.new(0,20,0,20);incBtn.Position=UDim2.new(1,-(20+8),0.5,-10)
 	incBtn.BackgroundColor3=Color3.fromRGB(10,10,14);incBtn.BorderSizePixel=0
-	incBtn.Text="+";incBtn.TextColor3=WHITE;incBtn.Font=Enum.Font.GothamBlack;incBtn.TextSize=13;incBtn.ZIndex=11
+	incBtn.Text="+";incBtn.TextColor3=PURPLE;incBtn.Font=Enum.Font.GothamBlack;incBtn.TextSize=13;incBtn.ZIndex=11
 	Instance.new("UICorner",incBtn).CornerRadius=UDim.new(0,5)
 	Instance.new("UIStroke",incBtn).Color=BORDER2
 	local function applyBtnSize(w,h)
@@ -1861,4 +1861,4 @@ local function loadConfig()
 end
 switchTab("Speed")
 loadConfig()
-print("[U7Duels v2.1] Loaded!")
+print("[U7Duels] Loaded!")
