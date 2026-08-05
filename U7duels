@@ -5,7 +5,7 @@ do
 	local _PL  = game:GetService("Players").LocalPlayer
 	local _PG  = _PL:WaitForChild("PlayerGui")
 	local screenGui = Instance.new("ScreenGui")
-	screenGui.Name = "BloodHubIntro"
+	screenGui.Name = "U7DuelsIntro"
 	screenGui.ResetOnSpawn = false
 	screenGui.IgnoreGuiInset = true
 	screenGui.DisplayOrder = 999
@@ -144,7 +144,7 @@ local function saveConfig()
 		floatHeight=floatHeight, floatEnabled=floatEnabled, stretchRez=stretchRezEnabled,
 		mbBtnW=MB_BTN_W, mbBtnH=MB_BTN_H,
 	}
-	if writefile then pcall(function() writefile("BloodHubConfig.json",HttpService:JSONEncode(cfg)) end) end
+	if writefile then pcall(function() writefile("U7DuelsConfig.json",HttpService:JSONEncode(cfg)) end) end
 end
 task.spawn(function() while task.wait(5) do saveConfig() end end)
 local function isMyPlotByName(n)
