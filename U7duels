@@ -824,7 +824,7 @@ local ACTIVE_TAB_TXT = WHITE
 local IDLE_TAB_BG    = Color3.fromRGB(16,16,22)
 local IDLE_TAB_TXT   = DIM
 local gui=Instance.new("ScreenGui")
-gui.Name="BloodHubGUI";gui.ResetOnSpawn=false;gui.DisplayOrder=10;gui.IgnoreGuiInset=true
+gui.Name="U7DuelsGUI";gui.ResetOnSpawn=false;gui.DisplayOrder=10;gui.IgnoreGuiInset=true
 if not pcall(function() gui.Parent=game:GetService("CoreGui") end) then
 	gui.Parent=LP:WaitForChild("PlayerGui")
 end
@@ -899,12 +899,12 @@ content.Name="ContentArea"
 content.Size=UDim2.new(1,-SW-1,1,-40-CORNER);content.Position=UDim2.new(0,SW+1,0,40)
 content.BackgroundColor3=BG;content.BorderSizePixel=0;content.ClipsDescendants=true;content.ZIndex=2
 local mini=Instance.new("TextButton",gui)
-mini.Name="BloodMini";mini.Size=UDim2.new(0,120,0,26);mini.Position=UDim2.new(0,40,0,40)
+mini.Name="U7DuelsMini";mini.Size=UDim2.new(0,120,0,26);mini.Position=UDim2.new(0,40,0,40)
 mini.BackgroundColor3=SIDEBAR;mini.BorderSizePixel=0
-mini.Text="BLOOD HUB";mini.TextColor3=ACCENT
+mini.Text="U7Duels";mini.TextColor3=ACCENT
 mini.Font=Enum.Font.GothamBlack;mini.TextSize=10;mini.ZIndex=20;mini.Visible=false
 Instance.new("UICorner",mini).CornerRadius=UDim.new(0,8)
-Instance.new("UIStroke",mini).Color=DARK_ACC
+Instance.new("UIStroke",mini).Color=PURPLE_ACC
 makeDraggable(mini)
 local guiVisible=true
 local function showGui() main.Visible=true;mini.Visible=false;guiVisible=true end
