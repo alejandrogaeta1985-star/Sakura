@@ -5,7 +5,7 @@ do
 	local _PL  = game:GetService("Players").LocalPlayer
 	local _PG  = _PL:WaitForChild("PlayerGui")
 	local screenGui = Instance.new("ScreenGui")
-	screenGui.Name = "U7DuelsIntro"
+	screenGui.Name = "MOONHubIntro"
 	screenGui.ResetOnSpawn = false
 	screenGui.IgnoreGuiInset = true
 	screenGui.DisplayOrder = 999
@@ -27,7 +27,7 @@ do
 	title.Size = UDim2.new(0.9,0,0.25,0)
 	title.Position = UDim2.new(0.05,0,0.35,0)
 	title.BackgroundTransparency = 1
-	title.Text = "U7Duels"
+	title.Text = "MOONHub"
 	title.TextColor3 = Color3.fromRGB(255,45,45)
 	title.TextTransparency = 1
 	title.TextScaled = true
@@ -783,7 +783,7 @@ local function setupChar(char)
 	if head then
 		local old=head:FindFirstChild("BloodSpeedBB");if old then old:Destroy() end
 		local bb=Instance.new("BillboardGui",head)
-		bb.Name="BloodSpeedBB";bb.Size=UDim2.new(0,140,0,25)
+		bb.Name="MOONSpeedBB";bb.Size=UDim2.new(0,140,0,25)
 		bb.StudsOffset=Vector3.new(0,3,0);bb.AlwaysOnTop=true
 		speedLabel=Instance.new("TextLabel",bb)
 		speedLabel.Size=UDim2.new(1,0,1,0);speedLabel.BackgroundTransparency=1
@@ -802,7 +802,7 @@ local function setupChar(char)
 end
 LP.CharacterAdded:Connect(setupChar)
 if LP.Character then task.spawn(function() setupChar(LP.Character) end) end
-for _,n in pairs({"BloodHubGUI"}) do
+for _,n in pairs({"MOONHubGUI"}) do
 	local old=game:GetService("CoreGui"):FindFirstChild(n);if old then old:Destroy() end
 	local pg2=LP:FindFirstChild("PlayerGui");if pg2 then local o=pg2:FindFirstChild(n);if o then o:Destroy() end end
 end
@@ -824,7 +824,7 @@ local ACTIVE_TAB_TXT = WHITE
 local IDLE_TAB_BG    = Color3.fromRGB(16,16,22)
 local IDLE_TAB_TXT   = DIM
 local gui=Instance.new("ScreenGui")
-gui.Name="U7DuelsGUI";gui.ResetOnSpawn=false;gui.DisplayOrder=10;gui.IgnoreGuiInset=true
+gui.Name="MOONHubGUI";gui.ResetOnSpawn=false;gui.DisplayOrder=10;gui.IgnoreGuiInset=true
 if not pcall(function() gui.Parent=game:GetService("CoreGui") end) then
 	gui.Parent=LP:WaitForChild("PlayerGui")
 end
@@ -1788,7 +1788,7 @@ task.spawn(function()
 	end
 end)
 local function loadConfig()
-	if not(isfile and isfile("BloodHubConfig.json")) then return end
+	if not(isfile and isfile("MOONHubConfig.json")) then return end
 	local ok,cfg=pcall(function() return HttpService:JSONDecode(readfile("BloodHubConfig.json")) end)
 	if not ok or not cfg then return end
 	local function lk(entry,data)
@@ -1861,4 +1861,4 @@ local function loadConfig()
 end
 switchTab("Speed")
 loadConfig()
-print("[U7Duels] Loaded!")
+print("[MOONHub] Loaded!")
